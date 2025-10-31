@@ -81,7 +81,7 @@ jobs:
         all_Parameters=$@
         echo -e "all_Parameters: $all_Parameters\n"
 
-        if ["$all_Parameters" == "" ]; then
+        if [ "$all_Parameters" == "" ]; then
             all_Parameters="-h"
         fi
 
