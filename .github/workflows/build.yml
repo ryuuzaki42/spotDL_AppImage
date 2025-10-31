@@ -77,7 +77,7 @@ jobs:
         HERE=$(echo "$HERE" | sed "s/usr\/bin//")
         echo "Removed usr/bin HERE: $HERE"
 
-        cd "$HERE"/opt/python3*/bin/
+        #cd "$HERE"/opt/python3*/bin/
         all_Parameters=$@
         echo -e "all_Parameters: $all_Parameters\n"
 
@@ -85,7 +85,7 @@ jobs:
             all_Parameters="-h"
         fi
 
-        ./python3.* spotdl "$all_Parameters"
+        "$HERE"/opt/python3*/bin/python3.* spotdl "$all_Parameters"
 
         echo'> squashfs-root/AppRun
         chmod +x squashfs-root/AppRun
