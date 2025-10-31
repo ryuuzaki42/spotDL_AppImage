@@ -92,28 +92,8 @@ jobs:
         all_Parameters=$@
         echo -e "all_Parameters: $all_Parameters\n"
 
-        if [ "$all_Parameters" != "" ]; then
-            file=$(echo "$all_Parameters" | rev | cut -d " " -f1 | rev)
-            parameters_less_file=$(echo "$all_Parameters" | rev | cut -d " " -f2- | rev)
+        ./python3.* spotdl "$all_Parameters"
 
-            if [ "$parameters_less_file" == "$file" ]; then
-                parameters_less_file=""
-            fi
-
-            file="$local_folder/$file" # Add the current directory, $PWD, to the parameter with file
-            echo "file: $file"
-            echo "parameters_less_file: $parameters_less_file"
-
-            if [ "$parameters_less_file" == "" ]; then # Check if has parameters
-                parameters="$file"
-            else
-                parameters="$parameters_less_file $file"
-            fi
-
-            ./python3.* spotdl "$parameters"
-        else
-            ./python3.* spotdl
-        fi
         echo'> squashfs-root/AppRun
         chmod +x squashfs-root/AppRun
         cat squashfs-root/AppRun
