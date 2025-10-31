@@ -85,7 +85,7 @@ jobs:
             all_Parameters="-h"
         fi
 
-        "$HERE"/opt/python3*/bin/python3.* spotdl "$all_Parameters"
+        "$HERE"/opt/python3*/bin/python3.* "$HERE"/opt/python3*/bin/spotdl "$all_Parameters"
 
         echo'> squashfs-root/AppRun
         chmod +x squashfs-root/AppRun
