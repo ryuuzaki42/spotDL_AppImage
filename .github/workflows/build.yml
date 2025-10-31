@@ -45,10 +45,6 @@ jobs:
 
         ./pip3.* install --upgrade pip
 
-         # Edit the folder of cache file, .triddefs.trd, from local (./) to tmp (/tmp/) folder
-         ## sed -i 's/cachefilename = path.parent \/ cachefilename/cachefilename = "\/tmp\/" + str(path.parent \/ cachefilename)/' trid.py
-         #
-         #cat trid.py | grep "cachefilename = "
          pwd; ls -lah
 
     - name: Make AppImage
@@ -57,22 +53,14 @@ jobs:
         cd squashfs-root/
         pwd; ls -lah
 
-        #rm -v python* .DirIcon AppRun
         rm .DirIcon
-
         mv python.png spotdl.png
-        #rm python.png
-        #wget https://mark0.net/trid_icon.jpg -O TrID.png
-        #mv python3*.desktop TrID.desktop
         mv python3*.desktop spotdl.desktop
 
-        #cd opt/python3.*/bin/
-        #version=$(grep "PROGRAM_VER " trid.py | cut -d '"' -f2)
-        version="1.0"
+        version="4.4.3"
         echo "spotdl version: $version"
         pwd; ls -lah
 
-        #cd ../../../
         cat spotdl.desktop
         sed -i "s/Name=.*/Name=spotdl/" spotdl.desktop
         cat spotdl.desktop
