@@ -1,9 +1,9 @@
 
-# TrID_AppImage
+# spotDL_AppImage
 
-## Repository: https://github.com/ryuuzaki42/TrID_AppImage
+## Repository: https://github.com/ryuuzaki42/spotDL_AppImage
 
-TrID is a CLI utility designed to identify file types from their binary signatures.
+spotDL is a CLI utility designed to finds songs from Spotify playlists on YouTube and downloads them - along with album art, lyrics and metadata.
 
 ## Usage
 ```
@@ -14,4 +14,6 @@ TrID is a CLI utility designed to identify file types from their binary signatur
 ```
 
 ---
-https://mark0.net/soft-trid-e.html
+https://github.com/spotDL/spotify-downloader
+
+https://github.com/spotDL/spotify-downloader/releases/latest
