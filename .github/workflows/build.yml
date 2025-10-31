@@ -81,6 +81,10 @@ jobs:
         all_Parameters=$@
         echo -e "all_Parameters: $all_Parameters\n"
 
+        if ["$all_Parameters" == '' ]; then
+            all_Parameters="-h"
+        fi
+
         ./python3.* spotdl "$all_Parameters"
 
         echo'> squashfs-root/AppRun
