@@ -68,7 +68,8 @@ jobs:
 
         #cd opt/python3.*/bin/
         #version=$(grep "PROGRAM_VER " trid.py | cut -d '"' -f2)
-        #echo "spotdl version: $version"
+        version="1.0"
+        echo "spotdl version: $version"
         pwd; ls -lah
 
         #cd ../../../
