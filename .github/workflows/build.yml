@@ -1,5 +1,5 @@
 name: Create new realease
-# Test 2.43
+
 on:
   push:
     branches:
@@ -44,7 +44,6 @@ jobs:
         ./pip3.* install spotdl
 
         ./pip3.* install --upgrade pip
-
          pwd; ls -lah
 
     - name: Make AppImage
@@ -57,8 +56,8 @@ jobs:
         mv python.png spotdl.png
         mv python3*.desktop spotdl.desktop
 
-        version="4.4.3"
-        echo "spotdl version: $version"
+        version=$(grep -o "spotDL:.*" README.md | cut -d ' ' -f2)
+        echo "spotDL version: $version"
         pwd; ls -lah
 
         cat spotdl.desktop
