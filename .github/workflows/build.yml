@@ -56,7 +56,7 @@ jobs:
         mv python.png spotdl.png
         mv python3*.desktop spotdl.desktop
 
-        version=$(grep -o "spotDL:.*" README.md | cut -d ' ' -f2)
+        version=$(grep -o "spotDL:.*" ../README.md | cut -d ' ' -f2)
         echo "spotDL version: $version"
         pwd; ls -lah
 
