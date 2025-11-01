@@ -83,7 +83,6 @@ jobs:
         if [ "$all_Parameters" == "" ]; then
             all_Parameters="-h"
         fi
-
         "$HERE"/opt/python3*/bin/python3.* "$HERE"/opt/python3*/bin/spotdl "$all_Parameters"
 
         echo'> squashfs-root/AppRun
