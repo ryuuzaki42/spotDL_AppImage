@@ -53,7 +53,9 @@ jobs:
         pwd; ls -lah
 
         rm .DirIcon
-        mv python.png spotdl.png
+        #mv python.png spotdl.png
+        wget https://github.com/spotDL/web-ui/blob/master/dist/favicon.ico -O spotdl.ico
+
         rm AppRun
         #mv python3*.desktop spotdl.desktop
         rm python3*.desktop
