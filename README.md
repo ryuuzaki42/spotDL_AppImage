@@ -13,6 +13,9 @@ https://github.com/spotDL/spotify-downloader
     ./spotDL*_JB-x86_64.AppImage -h
 
     ./spotDL*_JB-x86_64.AppImage [url]
+
+    # Web UI
+    ./spotDL*_JB-x86_64.AppImage web
 ```
 
 ---
