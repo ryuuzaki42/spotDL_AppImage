@@ -69,7 +69,7 @@ jobs:
         Type=Application
         Name=spotdl
         Exec=spotdl
-        Comment=Download Spotify/YouTube playlists
+        Comment=finds songs from Spotify playlists on YouTube and downloads them
         Icon=spotdl
         Categories=Utility
         Terminal=true' > spotdl.desktop
