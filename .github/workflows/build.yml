@@ -46,6 +46,9 @@ jobs:
         ./pip3.* install --upgrade pip
          pwd; ls -lah
 
+    - name: Install imagemagick
+      run: sudo apt install imagemagick
+
     - name: Make AppImage
       run: |
         set -x
