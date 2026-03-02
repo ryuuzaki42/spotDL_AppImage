@@ -58,16 +58,15 @@ jobs:
         #mv python3*.desktop spotdl.desktop
         rm python3*.desktop
 
-        cat > spotdl.desktop << EOF
-        [Desktop Entry]
+        echo '[Desktop Entry]
         Type=Application
         Name=spotdl
         Exec=spotdl
         Comment=Download Spotify/YouTube playlists
         Icon=spotdl
         Categories=Utility
-        Terminal=true
-        EOF
+        Terminal=true' > spotdl.desktop
+        chmod +x spotdl.desktop
 
         version=$(grep -o "spotDL:.*" ../README.md | cut -d ' ' -f2)
         echo "spotDL version: $version"
