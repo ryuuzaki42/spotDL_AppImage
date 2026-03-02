@@ -54,7 +54,19 @@ jobs:
 
         rm .DirIcon
         mv python.png spotdl.png
-        mv python3*.desktop spotdl.desktop
+        #mv python3*.desktop spotdl.desktop
+        rm python3*.desktop
+
+        cat > spotdl.desktop << EOF
+        [Desktop Entry]
+        Type=Application
+        Name=spotdl
+        Exec=spotdl
+        Comment=Download Spotify/YouTube playlists
+        Icon=spotdl
+        Categories=Utility
+        Terminal=true
+        EOF
 
         version=$(grep -o "spotDL:.*" ../README.md | cut -d ' ' -f2)
         echo "spotDL version: $version"
@@ -67,7 +79,8 @@ jobs:
         cd ../
         pwd; ls -lah
 
-        echo '#!/bin/bash
+        cat > squashfs-root/AppRun << EOF
+        #!/bin/bash
         local_folder=$PWD
         echo "local_folder $local_folder"
 
@@ -85,7 +98,8 @@ jobs:
         fi
         "$HERE"/opt/python3*/bin/python3.* "$HERE"/opt/python3*/bin/spotdl "$all_Parameters"
 
-        echo'> squashfs-root/AppRun
+        echo
+        EOF
         chmod +x squashfs-root/AppRun
         cat squashfs-root/AppRun
 
