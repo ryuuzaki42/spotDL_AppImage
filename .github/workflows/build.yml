@@ -54,6 +54,7 @@ jobs:
 
         rm .DirIcon
         mv python.png spotdl.png
+        rm AppRun
         #mv python3*.desktop spotdl.desktop
         rm python3*.desktop
 
@@ -79,8 +80,7 @@ jobs:
         cd ../
         pwd; ls -lah
 
-        cat > squashfs-root/AppRun << EOF
-        #!/bin/bash
+        echo '#!/bin/bash
         local_folder=$PWD
         echo "local_folder $local_folder"
 
@@ -98,8 +98,7 @@ jobs:
         fi
         "$HERE"/opt/python3*/bin/python3.* "$HERE"/opt/python3*/bin/spotdl "$all_Parameters"
 
-        echo
-        EOF
+        echo'> squashfs-root/AppRun
         chmod +x squashfs-root/AppRun
         cat squashfs-root/AppRun
 
