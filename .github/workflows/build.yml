@@ -128,7 +128,7 @@ jobs:
       env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
       with:
-          release_id: ${{ steps.create_release.outputs.id }}
+          file: "spotdl*.AppImage; spotdl*.zsync; spotdl*.md5"
           #overwrite: true
           verbose: true
           draft: false
