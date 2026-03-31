@@ -1,7 +1,7 @@
 
 # spotDL_AppImage
 
-spotDL is a CLI utility designed to finds songs from Spotify playlists on YouTube and downloads them - along with album art, lyrics and metadata.
+spotDL is a CLI utility designed to finds songs from Spotify playlists on YouTube and downloads them - along with album art, lyrics and metadata
 
 https://github.com/spotDL/spotify-downloader
 
@@ -17,6 +17,5 @@ https://github.com/spotDL/spotify-downloader
     # Web UI
     ./spotDL*_JB-x86_64.AppImage web
 ```
-
 ---
 https://github.com/spotDL/spotify-downloader/releases
