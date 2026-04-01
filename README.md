@@ -10,11 +10,16 @@ https://github.com/spotDL/spotify-downloader
 
 ## Usage
 ```
+# Base
+    ./spotDL*_JB-x86_64.AppImage
+
+# Help
     ./spotDL*_JB-x86_64.AppImage -h
 
+# With some URL
     ./spotDL*_JB-x86_64.AppImage [url]
 
-    # Web UI
+# Web UI
     ./spotDL*_JB-x86_64.AppImage web
 ```
 ---
