@@ -76,13 +76,7 @@ jobs:
         Categories=Utility
         Terminal=true' > spotdl.desktop
         chmod +x spotdl.desktop
-
-        #cat spotdl.desktop
-        #sed -i "s/Name=.*/Name=spotdl/" spotdl.desktop
         cat spotdl.desktop
-
-        cd ../
-        pwd; ls -lah
 
         echo '#!/bin/bash
         local_folder=$PWD
@@ -101,12 +95,14 @@ jobs:
             all_Parameters="-h"
         fi
         "$HERE"/opt/python3*/bin/python3.* "$HERE"/opt/python3*/bin/spotdl "$all_Parameters"
+        echo'> AppRun
+        chmod +x AppRun
+        cat AppRun
 
-        echo'> squashfs-root/AppRun
-        chmod +x squashfs-root/AppRun
-        cat squashfs-root/AppRun
+        cd ../
+        pwd; ls -lah
 
-        mv README.md squashfs-root/
+        cp README.md squashfs-root/
         ls -lah squashfs-root/
 
         # Wrong permissions on AppDir, please set it to 0755 and try again
