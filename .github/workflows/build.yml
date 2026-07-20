@@ -36,7 +36,7 @@ jobs:
         ./"$fileName" --appimage-extract
         pwd; ls -lah
 
-    - name: Install spotdl and update pip
+    - name: Install spotDL and update pip
       run: |
         set -x
         cd squashfs-root/opt/python3*/bin/
@@ -62,21 +62,21 @@ jobs:
 
         rm .DirIcon python.png
         wget https://raw.githubusercontent.com/spotDL/web-ui/refs/heads/master/dist/favicon.ico
-        convert favicon.ico[0] spotdl.png
+        convert favicon.ico[0] spotDL.png
         rm favicon.ico
 
         rm AppRun python3*.desktop
 
         echo '[Desktop Entry]
         Type=Application
-        Name=spotdl
-        Exec=spotdl
+        Name=spotDL
+        Exec=spotDL
         Comment=finds songs from Spotify playlists on YouTube and downloads them
-        Icon=spotdl
+        Icon=spotDL
         Categories=Utility
-        Terminal=true' > spotdl.desktop
-        chmod +x spotdl.desktop
-        cat spotdl.desktop
+        Terminal=true' > spotDL.desktop
+        chmod +x spotDL.desktop
+        cat spotDL.desktop
 
         echo '#!/bin/bash
         local_folder=$PWD
@@ -111,7 +111,7 @@ jobs:
         ARCH=x86_64 VERSION="${version}-1_JB" ./appimagetool-x86_64.AppImage squashfs-root/
         pwd; ls -lah
 
-        fileName=$(ls spotdl*.AppImage)
+        fileName=$(ls spotDL*.AppImage)
         echo "fileName: $fileName"
         md5sum "$fileName" > "${fileName}.md5"
         pwd; ls -lah
@@ -120,8 +120,8 @@ jobs:
       env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
       with:
-          file: "spotdl*.AppImage; spotdl*.zsync; spotdl*.md5"
+          file: "spotDL*.AppImage; spotDL*.zsync; spotDL*.md5"
           #overwrite: true
           verbose: true
           draft: false
-          default_release_name: "spotdl V in AppImage"
+          default_release_name: "spotDL V in AppImage"
