@@ -6,7 +6,7 @@ spotDL is a CLI utility designed to finds songs from Spotify playlists on YouTub
 https://github.com/spotDL/spotify-downloader
 
 ## Repository: https://github.com/ryuuzaki42/spotDL_AppImage
-    spotDL: 4.5.0
+    spotDL: 4.5.1
 
 ## Usage
 ```
